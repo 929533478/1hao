@@ -1,0 +1,52 @@
+<!--miniprogram/pages/video/video.wxml-->
+<view class='videos' wx:for="{{videolist}}" wx:key="{{index}}">
+  <view class="titlename">
+      <text>{{item.titlename}}</text>
+  </view>
+  
+  <view class="avatar">
+  <!--封面图片-->
+<view class="cover" id="{{index}}" bindtap="videoPlay" style="display:{{playIndex == index ? 'none':'block'}}">
+
+<image class='bofang' src='../../images/tabs/bofang1.png' bindtap="videoPlay"></image>
+
+
+  <image mode='scaleToFill' src='{{item.img_url}}'></image>
+
+  
+</view>
+    <video id="index{{index}}" wx:if="{{playIndex == index}}" src='{{item.video_url}}' controls>
+    </video>
+
+  </view>
+
+
+<view class='videotitle'>
+  <view class='title'>
+     <text class='fenxiang'>分享</text>
+    <view class='tleft'>
+     <button open-type="share" >
+      <image src='../../images/tabs/pengyouquan.png'></image>
+      <image src='../../images/tabs/weixin.png'></image>
+     </button> 
+    </view>
+  </view>
+
+  <view class='title'>
+   <view class='tright'>
+     
+     <image open-type="share" src='../../images/tabs/pinglun.png'></image>
+     <image  wx:if="{{item.hasChange}}"  src='../../images/tabs/dianzan_1.png' data-index="{{index}}" bindtap='like'></image>
+     <image wx:else src='../../images/tabs/dianzan.png' data-index="{{index}}" bindtap='like'></image>
+     
+     <text class='zanshu'>{{item.zanshu}}</text>
+    </view>
+    
+  </view>
+</view>
+
+
+
+
+</view>
+

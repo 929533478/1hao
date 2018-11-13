@@ -1,0 +1,117 @@
+.w{
+  color: #fff;
+}
+.b{
+  font-weight: bold;
+}
+ 
+.l{
+  border: 1rpx solid #fff;
+}
+ 
+.center{
+  text-align: center;
+  margin: auto 0;
+}
+ 
+.hor{
+  display: flex;
+}
+ 
+.f50{
+  font-size: 50rpx;
+}
+ 
+/**index css**/
+ 
+ 
+.bg {
+  width: 100%;
+  height: 700rpx;
+}
+ 
+
+.containers{
+  position:absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 700rpx;
+  display: block;
+  box-shadow:0 0 8px 0;
+
+}
+ 
+.nowWeather{
+  padding: 60rpx;
+}
+ 
+.weahterDetail{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 50rpx;
+}
+ 
+.forcast{
+  padding: 30rpx;
+  margin-left: 16rpx;
+  margin-right: 16rpx;
+  border-bottom: 1rpx solid #eee;
+  justify-content: space-around;
+}
+ 
+.img{
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 16rpx;
+}
+.containers .heise{
+  position: absolute;
+  background: #121314;
+  width:100px;
+  height: 25px;
+  right: 0px;
+  bottom:0px;
+}
+.temp{
+  width: 70px;
+  height: 100px;
+  font-size: 160rpx;
+  animation: myfirst 1s;
+}
+ 
+@keyframes myfirst
+{
+0%   {font-size: 120rpx;}
+25%  {font-size: 130rpx;}
+30%  {font-size: 140rpx;}
+40%  {font-size: 130rpx;}
+50%  {font-size: 120rpx;}
+60%  {font-size: 150rpx;}
+70%  {font-size: 140rpx;}
+100% {font-size: 170rpx;}
+}
+.cname{
+  animation: mycname 0.8s;
+  font-size: 17px;
+  color: #4D6D8C;
+}
+@keyframes mycname
+{
+0%   {font-size: 10px;}
+25%  {font-size: 11px;}
+30%  {font-size: 12px;}
+40%  {font-size: 13px;}
+50%  {font-size: 14px;}
+60%  {font-size: 13px;}
+70%  {font-size: 12px;}
+100% {font-size: 15px;}
+}
+
+
+

@@ -1,0 +1,12 @@
+
+<text>miniprogram/pages/3d/3d.wxml</text>
+<view class='navcon' style='transform:rotateY({{degsum}}deg);'>
+ <view class="con1" style="background-image:url('https://6170-appsjop-18c083-1257902140.tcb.qcloud.la/image/bjcl/z1.jpg?sign=d67a1b5ee1be2d63f5ae00f6e4b19982&t=1540986699')"></view>
+ <view class="con2" style="background-image:url('https://6170-appsjop-18c083-1257902140.tcb.qcloud.la/image/bjcl/che1.jpg?sign=3cc9a18e5101df94f4ef1b43180d56ba&t=1540986653')"></view>
+ <view class="con3" style="background-image:url('https://6170-appsjop-18c083-1257902140.tcb.qcloud.la/image/bjcl/che2.jpg?sign=0ba2a0625e1204ab79cc43af83390c2d&t=1540986688')"></view>
+ <view class="con4" style="background-image:url('https://6170-appsjop-18c083-1257902140.tcb.qcloud.la/image/bjcl/z1.jpg?sign=d67a1b5ee1be2d63f5ae00f6e4b19982&t=1540986699')"></view>
+</view>
+
+<singList id='singList' value1='str' value2='{{obj}}' isShow='{{isShow}}'
+bindaction='exFun'>
+</singList>

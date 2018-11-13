@@ -1,0 +1,63 @@
+<!--miniprogram/pages/price/price.wxml-->
+<view class="slider">
+    <swiper autoplay interval="3500" indicator-dots="false">
+        <swiper-item wx:for="{{imagelist}}" wx:key="{{index}}">
+           <image src="{{item.img_url}}" mode="aspectFill" lazy-load width="375" height="150" />
+        </swiper-item>
+         </swiper>
+</view>
+<view class='xqbox'>
+
+<view class='xqname dixian'>
+  <text>小号植物防霉防蛀香薰包/多用香袋香包 薰衣草味7*4.5CM</text>
+</view>
+<text class='xqprice'>￥9.9</text>
+<view bindtap='cuxiao' class='dixian'>
+  <text wx:if="{{cx}}" > 可享受以下优惠</text>
+ <text wx:else>满200减50 </text>
+ <text wx:if="{{cx}}" class='xqjiantou'>→</text>
+ <text wx:else class='xqjiantou'>↓</text>
+</view>
+<view wx:if="{{cx}}">
+  <view class="fangkuai {{cx==true? 'huanman':'xiaoshi'}}">
+  满200元减50元
+  </view>
+   <view class="fangkuai {{cx==true? 'huanman':'xiaoshi'}} ">
+  满48元即可获得热销商品,送完为止
+  </view>
+</view>
+<!--保障服务-->
+<view>
+保障服务 : 支持7天无理由退货
+</view>
+<!--boxend-->
+<!--图文详情-->
+</view>
+<view class='tuwen'>
+  <view>图文详情</view>
+  <view>规格参数</view>
+  <view>售后服务</view>
+</view>
+<view class="jiajian {{jiaru==true? 'gaodu':''}} "  >
+<text>购买数量</text>
+<view class='anniu'>
+<text class='jian' bindtap="jian">-</text>
+ 
+  <text>{{pnum}}</text>
+   <text class='jia' bindtap="jia">+</text>
+</view>
+</view>
+<view class='imgbox'>
+<image src='https://img20.360buyimg.com/popWaterMark/jfs/t1/6482/25/2085/153760/5bcf46b1E0a8e8b36/5c932551c9d10d6b.jpg'></image>
+<image src='https://img14.360buyimg.com/popWaterMark/jfs/t1/8860/22/1713/251951/5bcf46b1Ec3a13b9b/f451d3d4b7587285.jpg'></image>
+</view>
+<view class='jsbox'>
+<view class='gokefu'>
+<image src='../../images/tabs/kefu.png'></image>
+<image src='../../images/tabs/cart.png'></image>
+<text class='goprice'>{{pnum}}</text>
+</view>
+<button class='gouwuche' bindtap='jiaru'>加入购物车</button>
+<button class='goumai'>马上购买</button>
+</view>
+

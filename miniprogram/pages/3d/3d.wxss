@@ -1,0 +1,34 @@
+/* miniprogram/pages/3d/3d.wxss */
+ .navcon{
+     position: relative;
+     left: 60px;
+     width: 150px;
+     height: 105px;
+     transform-style: preserve-3d;
+     transform:rotateY(60deg);
+         }
+ .navcon .con1,.con4{
+  position: absolute;
+  
+  width: 150px;
+  height: 105px;
+  background-size: 100%;
+        }
+.navcon .con2,.con3{
+ position: absolute;
+ height:105px;
+ width: 60px;
+ background-size:100%;
+}
+.navcon .con1{
+  transform:translateZ(30px);
+}
+.navcon .con2{
+  transform:translate(120px)rotateY(90deg);
+}
+.navcon .con3{
+   transform:translateX(-29px)rotateY(90deg); 
+}
+.navcon .con4{
+ transform:translateZ(-30px);
+}

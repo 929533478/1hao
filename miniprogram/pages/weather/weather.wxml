@@ -1,0 +1,54 @@
+
+<!--
+<image wx:if="sum==1" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541496534652&di=c61d23a0d48eece80f0c4abc02a1b63f&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180623%2F0814ec38f0114364840c0098b9ec61fd.gif" class="bg"></image>
+
+<image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541497069841&di=cd636218aaae1a854807cfa13ad0b5a2&imgtype=0&src=http%3A%2F%2Fs9.rr.itc.cn%2Fr%2FwapChange%2F20167_15_23%2Fa8bc7h0882351084362.jpg" class="bg"></image>
+
+<image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541497791976&di=da41d7d81045917a8348ed56e897d8a0&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fq_70%2Cc_zoom%2Cw_640%2Fimages%2F20180711%2Fa3aed628e4594ef2baf83d5bf058b4ac.gif" class="bg"></image>
+-->
+<image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541502235423&di=12d26e86a1ea7af202e8c34b536c12c1&imgtype=0&src=http%3A%2F%2Fupfile.asqql.com%2F2009pasdfasdfic2009s305985-ts%2F2015-12%2F201512920202878460.gif' class='bg'></image>
+<view class="containers">
+ 
+  <view class="nowWeather">
+    <view class="city w">{{city}} {{district}}</view>
+    <view class="road w">{{street}}</view>
+    <view class="temp w b">{{tmp}}°</view>
+    <view class="weather w">{{txt}} | 空气 {{qlty}}</view>
+  </view>
+ 
+  <view class="weahterDetail">
+    <view class="">
+      <view class="w center">{{dir}}</view>
+      <view wx:if="{{sc == '微风'}}" class="w b center f50">微风</view>
+      <view wx:else class="w b center f50">{{sc}}级</view>
+    </view>
+    <view class="l"></view>
+    <view class="">
+      <view class="w center">相对湿度</view>
+      <view class="w b center f50">{{hum}}%</view>
+    </view>
+    <view class="l"></view>
+    <view class="">
+      <view class="w center">体感温度</view>
+      <view class="w b center f50">{{fl}}°</view>
+    </view>
+  </view>
+ 
+  <view class='heise'>
+  
+  </view>
+
+</view>
+ 
+<view style=''>
+<view wx:for="{{daily_forecast}}" wx:for-index="i" wx:key="{{index}}" wx:for-item="item">
+  <view class="hor forcast">
+    <view class="center {{cntime===i?'cname':''}}">{{day[i]}}</view>
+    <view class="hor">
+    <image class="img" src="https://cdn.heweather.com/cond_icon/{{item.cond.code_d}}.png"></image>
+      <view class="center">{{item.cond.txt_d}} | {{qlty}}</view>
+    </view>
+    <view class="center">{{item.tmp.min}}°/ {{item.tmp.max}}°</view>
+  </view>
+</view>
+</view>

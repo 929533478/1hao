@@ -1,0 +1,62 @@
+{
+  "cloud": true,
+  "pages": [
+    
+    "pages/home/home",
+    "pages/price/price", 
+    "pages/video/video",
+    "pages/databaseGuide/databaseGuide",
+    "pages/login/login",
+    "pages/weather/weather",
+    "pages/dainwei/dinwei",
+    "pages/3d/3d",
+    "pages/index/index",
+    "pages/chooseLib/chooseLib",
+    "pages/deployFunctions/deployFunctions",
+    "pages/userConsole/userConsole",
+    "pages/addFunction/addFunction",
+    "pages/authorize/authorize",
+    "pages/storageConsole/storageConsole"
+   
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "1号店",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "position": "bottom",
+    "color": "#000",
+    "backgroundColor": "#f1f1f1f1",
+    "selectedColor": "#EE523D",
+    "borderStyle": "#f00",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "./images/tabs/home.png",
+        "selectedIconPath": "./images/tabs/home-active.png"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "text": "买家秀",
+        "iconPath": "./images/tabs/shipin.png",
+        "selectedIconPath": "./images/tabs/shipin_1.png"
+      },
+      {
+        "pagePath": "pages/weather/weather",
+        "text": "本地服务",
+        "iconPath": "./images/tabs/profile.png",
+        "selectedIconPath": "./images/tabs/profile-active.png"
+      },
+      {
+        "pagePath": "pages/authorize/authorize",
+        "text": "个人中心",
+        "iconPath": "./images/tabs/contact.png",
+        "selectedIconPath": "./images/tabs/contact-active.png"
+      }
+    ]
+  }
+}

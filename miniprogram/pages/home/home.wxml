@@ -1,0 +1,242 @@
+<!--miniprogram/pages/home/home.wxml-->
+<view class="app_top">
+    
+<view class='topimg'>
+ <image mode="aspectFill" src="https://6170-appsjop-18c083-1257902140.tcb.qcloud.la/image/nav/logo.png?sign=1b47059693bdb3c0e9a0eb5a9f28dea7&t=1540622918">
+  </image>
+  <span class="topspan">{{currentCity}}</span>
+  </view>
+
+        <view class="topinp">
+           <input type="text" placeholder="请输入商品名称"/>
+           <span class='iconfont icon-chaxun'></span>
+        </view>
+        
+
+        <view class="topbtn">
+            <span class='iconfont icon-weibiaoti--1'></span>
+            <span class='iconfont icon-gouwuche'></span>
+        </view>
+
+</view>
+
+
+<view class="slider">
+    <swiper autoplay interval="3500" indicator-dots="false">
+        <swiper-item wx:for="{{imagelist}}" wx:key="{{index}}">
+           <image src="{{item.img_url}}" mode="aspectFill" lazy-load width="375" height="150" />
+        </swiper-item>
+        
+     </swiper>
+</view>
+<view class='floor'>
+  <view wx:for="{{floorimg}}" wx:key="{{index}}"> <image src='{{item.img_url}}'></image></view>
+<!--5张圆图-->
+</view>
+<view class='header-menu'>
+<view class='header-one' wx:for="{{queryResult}}" wx:key="{{index}}">
+<image  src='{{item.count}}'>
+ <span>{{item.title}}</span>
+</image>
+</view>
+</view>
+<!--热点-->
+<view class='hot-tit-box'>
+<view class='hot-img' bindtap="change">
+<image src="https://img30.360buyimg.com/pop/jfs/t21754/343/1748747824/5109/466fad45/5b34966fNb95328c9.png?1be4686" mode='aspectFill' lazy-load class="hotimg" />
+</view>
+<view class='slide-box'>
+  <view class="text-item" style='transform:translate(0,{{host}}px)'>
+  
+  <view>
+    1号店最 铁 金币玩法大升级啦 ! ! !
+  </view>
+
+  <view>
+      2号店最 铁 金币玩法大升级啦 ! ! !
+  </view>  
+
+ <view>
+     1号店最 铁 金币玩法大升级啦 ! ! !
+ </view> 
+  
+</view>
+</view>
+</view>
+<!--新人礼包-->
+<view class='thecouple'>
+  <image src='https://6170-appsjop-18c083-1257902140.tcb.qcloud.la/image/commodity/5b7a2138N129c6967.gif?sign=95daade36f3c9a44186841ce6d58adf8&t=1540891782'></image>
+   <image src='https://6170-appsjop-18c083-1257902140.tcb.qcloud.la/image/commodity/5b7a215fN892abe43.gif?sign=b18b796b9c3e61b5cce133c1c30ec54a&t=1540891837'></image>
+</view>
+<!--超级单品-->
+<view class='rush-head'>
+<text>限时秒杀:</text>
+<view class='tui-countdown-content' wx:for="{{countDownList}}" wx:key="countDownList">
+  剩余
+  <text class='tui-conutdown-box'>{{item.day}}</text>天
+  <text class='tui-conutdown-box'>{{item.hou}}</text>时
+  <text class='tui-conutdown-box'>{{item.min}}</text>分
+  <text class='tui-conutdown-box tui-countdown-bg'>{{item.sec}}</text>秒
+</view>
+</view>
+<scroll-view scroll-x="true"> 
+<view class="uploadWrap" scroll-x="true"> 
+ <view class="upload_Item"> 
+  <image class="upload_Item_img" src="../../images/1(1).jpg"></image> 
+ <view>
+  <text class='newprice'>￥8.9</text>
+  <text class='originalprice'>￥99.9</text>
+  </view> 
+  <text>进口零食</text>
+ </view> 
+ <view class="upload_Item"> 
+  <image class="upload_Item_img" src="../../images/1(1).jpg"></image>
+  <view>
+  <text class='newprice'>￥6.9</text>
+  <text class='originalprice'>￥99.9</text>
+  </view> 
+  <text>进口零食</text>
+ </view> 
+ <view class="upload_Item"> 
+  <image class="upload_Item_img" src="../../images/1(3).jpg"></image>
+   <view>
+  <text class='newprice'>￥7.9</text>
+  <text class='originalprice'>￥99.9</text>
+  </view> 
+  <text>进口零食</text>
+ </view> 
+ <view class="upload_Item"> 
+  <image class="upload_Item_img" src="../../images/1(2).jpg"></image>
+   <view>
+  <text class='newprice'>￥8.9</text>
+  <text class='originalprice'>￥99.9</text>
+  </view> 
+  <text>进口零食</text>
+ </view> 
+ <view class="upload_Item"> 
+  <image class="upload_Item_img" src="../../images/1(4).jpg"></image>
+   <view>
+  <text class='newprice'>￥9.9</text>
+  <text class='originalprice'>￥99.9</text>
+  </view> 
+  <text>进口零食</text> 
+ </view> 
+ <view class="upload_Item"> 
+  <image class="upload_Item_img" src="../../images/1(2).jpg"></image>
+  <view>
+  <text class='newprice'>￥8.9</text>
+  <text class='originalprice'>￥99.9</text>
+  </view> 
+  <text>进口零食</text>
+ </view> 
+ <view class="upload_Item"> 
+  <image class="upload_Item_img" src="../../images/1(2).jpg"></image>
+  <view>
+  <text class='newprice'>￥9.9</text>
+  <text class='originalprice'>￥99.9</text>
+  </view> 
+  <text>进口零食</text>
+ </view> 
+  
+</view> 
+</scroll-view> 
+<!--超级单品-->
+<!--食品类型-->
+<view class='super-brand-item'>
+<image src='https://6170-appsjop-18c083-1257902140.tcb.qcloud.la/image/commodity/e16109279b3862db.jpg?sign=90257fb08d3b2fe964f3435e860cc7c7&t=1540904510'></image>
+<image src='https://6170-appsjop-18c083-1257902140.tcb.qcloud.la/image/commodity/24f40c35a0c9ed23.jpg?sign=78282ca8684a83a564aad4b851cbce27&t=1540904584'></image>
+</view>
+<view class='super-brand-item'>
+<image src='https://img20.360buyimg.com/img/jfs/t26158/67/1055821496/23551/ce085233/5bc0081dN6eafe961.jpg'></image>
+<image src='https://img20.360buyimg.com/img/jfs/t1/5187/14/5189/39651/5b9f18d0E210f4d36/a47e38a3d7273449.jpg'></image>
+</view>
+<view class='head-title'>
+<text>超级单品</text>
+<navigator>马上抢购 > > </navigator>
+</view>
+<scroll-view scroll-x="true"> 
+<view class="uploadWrap" scroll-x="true"> 
+
+ <view class="upload_Item" wx:for="{{titlelist}}" wx:key="{{index}}"> 
+  <image class="upload_Item_img" src="{{item.img_url}}"></image> 
+ <view>
+  <text class='newprice'>￥{{item.price}}</text>
+  <text class='originalprice'>￥{{item.oprice}}</text>
+  </view> 
+  <text>{{item.tname}}</text>
+ </view> 
+ 
+</view> 
+</scroll-view> 
+
+<!--单品下的图片-->
+<view class='super-brand-item'>
+<image src='https://img11.360buyimg.com/img/jfs/t26380/174/1048531820/23320/d5be9a55/5bc004dbN1a9ce04a.jpg'></image>
+<image src='https://img10.360buyimg.com/img/jfs/t26884/253/1052625821/32237/25934474/5bc00534Ndf60581f.jpg'></image>
+</view>
+
+<!--旋转图像-->
+<view class='navtatle'>
+<view class='navcon' style='transform:rotateY({{degsum}}deg);'>
+ <view class="con1" style="background-image:url('https://6170-appsjop-18c083-1257902140.tcb.qcloud.la/image/bjcl/m1.jpg?sign=6a1eafde2c388c28b5c2e58bc6a360bd&t=1541163423')"></view>
+ <view class="con2" style="background-image:url('https://6170-appsjop-18c083-1257902140.tcb.qcloud.la/image/bjcl/m2.jpg?sign=7f74f598e20e95f52e1c01149df0f497&t=1541163465')"></view>
+ <view class="con3" style="background-image:url('https://6170-appsjop-18c083-1257902140.tcb.qcloud.la/image/bjcl/m2.jpg?sign=7f74f598e20e95f52e1c01149df0f497&t=1541163465')"></view>
+ <view class="con4" style="background-image:url('https://6170-appsjop-18c083-1257902140.tcb.qcloud.la/image/bjcl/m1.jpg?sign=6a1eafde2c388c28b5c2e58bc6a360bd&t=1541163423')"></view>
+</view>
+<image src='https://img30.360buyimg.com/img/jfs/t23842/55/1541669090/32413/6d70f9ac/5bc006c3N9c170eb5.jpg'></image>
+</view>
+
+<view class='super-brand-item'>
+<image src='https://img11.360buyimg.com/img/jfs/t26380/174/1048531820/23320/d5be9a55/5bc004dbN1a9ce04a.jpg'></image>
+<image src='https://img10.360buyimg.com/img/jfs/t26884/253/1052625821/32237/25934474/5bc00534Ndf60581f.jpg'></image>
+</view>
+
+<!--旋转图像-->
+<view class='navtatle'>
+
+<view class='navcon' style='transform:rotateY({{degsum}}deg);'>
+ <view class="con1" style="background-image:url('https://6170-appsjop-18c083-1257902140.tcb.qcloud.la/image/bjcl/z1.jpg?sign=d67a1b5ee1be2d63f5ae00f6e4b19982&t=1540986699')"></view>
+ <view class="con2" style="background-image:url('https://6170-appsjop-18c083-1257902140.tcb.qcloud.la/image/bjcl/che1.jpg?sign=3cc9a18e5101df94f4ef1b43180d56ba&t=1540986653')"></view>
+ <view class="con3" style="background-image:url('https://6170-appsjop-18c083-1257902140.tcb.qcloud.la/image/bjcl/che2.jpg?sign=0ba2a0625e1204ab79cc43af83390c2d&t=1540986688')"></view>
+ <view class="con4" style="background-image:url('https://6170-appsjop-18c083-1257902140.tcb.qcloud.la/image/bjcl/z1.jpg?sign=d67a1b5ee1be2d63f5ae00f6e4b19982&t=1540986699')"></view>
+</view>
+
+<image src='https://img30.360buyimg.com/img/jfs/t23842/55/1541669090/32413/6d70f9ac/5bc006c3N9c170eb5.jpg'></image>
+</view>
+
+
+
+
+
+
+
+
+<view class='super-brand-item'>
+<image src='https://img13.360buyimg.com/img/jfs/t26335/62/1043379910/19198/a0006e56/5bc0056fNcd4a8c31.jpg'></image>
+<image src='https://img30.360buyimg.com/img/jfs/t23842/55/1541669090/32413/6d70f9ac/5bc006c3N9c170eb5.jpg'></image>
+</view>
+
+
+<!--懂你想要-->
+<view class='module-head'>
+<text class='head-tit'>懂你想要</text>
+</view>
+<view class='waterfall-lists' >
+  <view class='item-box' wx:for="{{shopimg}}" wx:key="{{index}}">
+  <navigator>
+  <image src='{{item.img_url}}' bindtap='myjump'></image>
+  </navigator>
+  <view class='item-tag'><text>折满</text></view>
+  
+  <text class='item-title'>{{item.item_title}}</text>
+ <view class='item-txt-box'>
+  <text class='item-price'>￥{{item.item_price}}</text>
+  <text class='item-link'>找相似</text>
+  </view>
+
+  </view>
+ 
+  
+  
+  
+</view>

@@ -1,0 +1,138 @@
+/* miniprogram/pages/price/price.wxss */
+.wxParse-img{   
+     /*background-color: #efefef;*/    
+     overflow: hidden;    
+     display: flex;
+ }
+.slider,.slider image,.slider swiper{
+  width:100%;
+  height:780rpx;  /*响应式的*/
+}
+.fangkuai{
+  background: #eee;
+  margin: 6px;
+  font-size:30rpx;
+  padding: 5px;
+  height: 0px;
+  
+}
+
+.huanman{
+  height:30px;
+  animation: myuo 0.5s;
+}
+@keyframes myuo{
+0%   {height:9px;}
+25%  {height:13px;}
+30%  {height:15px;}
+40%  {height:20px;}
+50%  {height:23px;}
+60%  {height:25px;}
+70%  {height:28px;}
+100% {height:29px;}
+}
+
+
+.xqbox .xqname{
+  font-size:16px;
+  font-weight:800;
+}
+.xqbox{
+margin:14px;
+}
+.xqbox .xqprice{
+  font-size:15px;
+  color: red;
+}
+.xqbox .xqjiantou{
+  position:absolute;
+  left: 328px;
+}
+.dixian{
+  border-bottom: 1px solid #eee;
+}
+.tuwen{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.tuwen view{
+  margin: 0 25px 0 25px;
+}
+.imgbox{
+  width: 100%;
+}
+.imgbox image{
+   width: 100%;
+   height: 345px;
+   overflow: hidden;    
+   display: flex;
+}
+.jsbox{
+  position: fixed;
+  display: flex;
+  flex-grow: wrap;
+  bottom: 0px;
+  justify-content:center; 
+  width: 100%;
+  background: #eee;
+}
+.jsbox .gokefu{
+ position: relative;
+ width: 33.33333%;
+ left:22px;
+ top:5px;
+}
+.jsbox .gokefu image{
+ 
+  width: 30%;
+  height: 70rpx;
+}
+.jsbox button{
+width: 33.33333%;
+height: 86rpx;
+border-radius: 0px;
+
+}
+.jsbox .goprice{
+  position: absolute;
+  top:-10px;
+  right:64rpx;
+  text-align: center;
+  color: white;
+  background: red;
+  font-size: 10px;
+  width: 17px;
+  height: 18px;
+  border-radius: 50%;
+}
+.jsbox .gouwuche{
+  background: #4C9AED;
+}
+.jsbox .goumai{
+  background: #EF3233;
+}
+.jiajian{
+  position: fixed;
+  bottom:43px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  height: 0;
+  background: #eee;
+  transition: all 0.5s;
+}
+.gaodu{
+  height:50px;
+}
+.jiajian .anniu{
+  margin:0px 10px 0 10px ;
+}
+.jiajian .anniu,text{
+   margin:0px 10px 0 10px;
+}
+.jiajian .anniu .jia,.jian{
+  font-size: 25px;
+  font-weight: 800;
+}
