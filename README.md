@@ -1,5 +1,43 @@
 # 云开发 quickstart
-789
+$ ssh-keygen -t rsa -C "929533478@qq.com"   #创建秘钥
+$ 回车回车回车
+   复制秘钥,绑定到github 
+   秘钥存在C:\Users\web\.ssh 的id_pub
+   复制秘钥,绑定到github 
+  在我的设置里ssh和GPG秘钥  
+$ ssh -T git@github.com    #查看是否绑定成功
+
+
+$ git config --global user.name "dong-can"   #配置用户名和邮箱(注册时的)
+$ git config --global user.email "2292722428@qq.com"
+   cd到要放克隆文件夹的目录(或右键 Git Bash Here)
+$ git clone git@github.com:dong-can/zhuimi
+   写项目代码
+$ cd 到本地项目库目录内
+$ sl 		 #展开目录
+重复1 $ git add .  	 #或 git add 具体文件名.html  #将修改文件添加到暂存区
+重复2 $ git commit -m "beizhu"   #指派本次修改备注     
+重复3 $ git push origin master 
+
+注意:
+1. 远程有本地没有的内容 
+   方法①
+   $ git pull  origin master
+   $ 本地选择 合并 或 谁替换谁
+   $ git add .
+   $ git push origin master
+   方法②
+   $ git branch xinfenzhiming #没有就加这步 创建新分支
+   $ git push origin xinfenzhiming  #代码push到了新分支    
+
+2. 远程删除文件后 pull到本地 本地也会删除
+
+3. 更改远程库url
+$ git remote -v
+origin https://github.com/someaccount/someproject.git (fetch)
+origin https://github.com/someaccount/someproject.git (push)
+可以看到是使用https协议进行访问的,将其改为git协议的url
+git remote set-url origin git@github.com:dong-can/zhuimi.git
 这是云开发的快速启动指引，其中演示了如何上手使用云开发的三大基础能力：
 
 - 数据库：一个既可在小程序前端操作，也能在云函数中读写的 JSON 文档型数据库
